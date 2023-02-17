@@ -6,13 +6,11 @@ import PokemonsListPage from '../Pages/PokemonsListPage/PokemonsListPage'
 const Router = () => {
 
     return(
-        // <BrowserRouter>
             <Routes>
-                <Route index element={<PokedexPage/>}/>
+                <Route index element={<PokemonsListPage/>}/>
                 <Route path="/pokeDetail/:poke" element={<PokemonDetailPage/>}/>
-                <Route path="/pokeList" element={<PokemonsListPage/>}/>
+                <Route path="/pokeList" element={<PokedexPage/>}/>
             </Routes>
-        // </BrowserRouter>
     )
 }
 

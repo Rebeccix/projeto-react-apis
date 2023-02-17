@@ -9,8 +9,8 @@ function App() {
     <GlobalState>
       <BrowserRouter>
         <ChakraProvider>
-          <Hearders />
-          <Router />
+          <Hearders/>
+          <Router/>
         </ChakraProvider>
       </BrowserRouter>
     </GlobalState>
