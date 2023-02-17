@@ -2,7 +2,7 @@ import api from "../config/api";
 
 export const getPokemons = async () => {
     let pokemonList = []
-  for (let id = 1; id <= 150; id++) {
+  for (let id = 1; id <= 5; id++) {
     try {
       const { data } = await api.get(`/${id}`);
       pokemonList.push(data);

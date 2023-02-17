@@ -5,7 +5,6 @@ import { useContext } from "react";
 import { GlobalContext } from "../../context/GlobalContext";
 import { Button, Image, Flex, Spacer, Text } from "@chakra-ui/react";
 import Alert from "../Alert/Alert";
-import { findPokemons } from "../../services/apiRequest";
 
 const Hearders = () => {
   const href = window.location.href;
@@ -29,7 +28,7 @@ const Hearders = () => {
       <Spacer />
       <Image w="19.25rem" h="113px" src={pokelogo} />
       <Spacer />
-      {href === "http://localhost:3000/" ? (
+      {href === "http://localhost:3000/"  ? (
         <Button
           colorScheme="twitter"
           w="18rem"

@@ -39,14 +39,20 @@ const GlobalState = (props) => {
 
   const addToPokedex = (poke) => {
     setPokemons(pokemons.filter(pokemonId => poke.id !== pokemonId.id))
-    setPokedexPoke([...pokedexPoke, poke])
-    setAlertPopUp([1, 'add'])
+    let exist = pokedexPoke.filter(pokeFind => poke.id === pokeFind.id)
+    if (exist.length === 0) {
+      setPokedexPoke([...pokedexPoke, poke]) 
+      setAlertPopUp([1, 'add'])
+    } 
   };
 
   const removePokemon = (poke) => {
-    setPokemons([...pokemons, poke])
-    setPokedexPoke(pokedexPoke.filter(pokemonId => poke.id !== pokemonId.id))
-    setAlertPopUp([1, 'remove'])
+    let exist = pokemons.filter(pokeFind => poke.id === pokeFind.id)
+    if (exist.length === 0) {
+      setPokemons([...pokemons, poke])
+      setPokedexPoke(pokedexPoke.filter(pokemonId => poke.id !== pokemonId.id))
+      setAlertPopUp([1, 'remove'])
+    } 
   };
 
   const findPoke = async (pokeParam) => {
